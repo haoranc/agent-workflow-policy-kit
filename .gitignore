@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+
+.venv/
+__pycache__/
+
+# Optional: if you adopt the `.agent/` convention, treat artifacts as ephemeral.
+.agent/artifacts/
