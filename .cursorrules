@@ -1,0 +1,21 @@
+# Cursor rules (Agent Workflow Policy Kit)
+#
+# Keep this file short: it should be a pointer + a few repo invariants.
+
+You are working in a template repo for **workflow policies**.
+
+Read first:
+- docs/workflow_policies/heuristics.md
+- docs/workflow_policies/policy_bundle_template/README.md
+- docs/workflow_policies/simple/README.md
+
+Core rules:
+- Keep invariants in docs/workflow_policies/<workflow>/core_policy.md
+- Keep step-by-step mechanics in docs/workflow_policies/<workflow>/runbook.md
+- Keep tunable rules-of-thumb in docs/workflow_policies/<workflow>/heuristics.md
+- Keep an append-only process log in docs/workflow_policies/<workflow>/changelog.md
+- After each run: update heuristics if you learned something; append changelog if the process changed
+- Do not add secrets or machine-specific paths; prefer repo-relative references
+
+If unclear, ask up to 3 questions, then proceed.
+
