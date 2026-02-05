@@ -101,23 +101,10 @@ docs/workflow_policies/
 
 In a “simple policy”, these live together in a single `*-policy.md` file.
 
-## Quickstart
-
-### Option A: Policy bundle (recommended for “real” workflows)
-1. Copy `docs/workflow_policies/policy_bundle_template/` → `docs/workflow_policies/<workflow_name>/`
-2. Fill in placeholders.
-3. Make your workflow wrapper (doc/script/agent command) point to:
-   - `docs/workflow_policies/<workflow_name>/core_policy.md`
-   - `docs/workflow_policies/<workflow_name>/runbook.md`
-   - `docs/workflow_policies/<workflow_name>/heuristics.md`
-4. After each real run, update:
-   - `heuristics.md` (new learnings)
-   - `changelog.md` (process changes)
-
-### Option B: Simple policy (for linear workflows)
-1. Copy `docs/workflow_policies/simple/simple_policy_template.md` → `docs/workflow_policies/simple/<workflow>-policy.md`
-2. Keep step-by-step mechanics in your workflow doc/script.
-3. Enforce the post-run update loop (add or refine heuristics).
+## Template docs
+- Full bundle template: `docs/workflow_policies/policy_bundle_template/README.md`
+- Simple policy template: `docs/workflow_policies/simple/README.md`
+- Example bundles: `docs/workflow_policies/examples/README.md`
 
 ## Using with AI tools (Cursor / Claude / Codex / etc.)
 The key pattern is the same regardless of tool:
