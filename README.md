@@ -4,6 +4,63 @@ Templates for **workflow policies** that help AI agents (and humans) run repeata
 
 Inspired by [@bcherny’s post](https://x.com/bcherny/status/2017742747067945390) and refined through my own workflow practice ([@Haoranchg](https://x.com/Haoranchg)).
 
+## Try in 5 minutes
+1. Install (pick one):
+   - **Use as a template**: click “Use this template” on GitHub
+   - **Clone**:
+     ```bash
+     git clone https://github.com/haoranc/agent-workflow-policy-kit
+     ```
+   - **Download ZIP**: use GitHub’s “Download ZIP”
+
+2. Ask your agent to create your first bundle (copy/paste prompt):
+   ```text
+   You are working in this repo. First, read:
+   - `docs/workflow_policies/policy_bundle_template/README.md`
+   - `docs/workflow_policies/simple/README.md`
+
+   Then decide whether this workflow should use:
+   - a full policy bundle at `docs/workflow_policies/<workflow>/`, or
+   - a simple policy at `docs/workflow_policies/simple/<workflow>-policy.md`
+
+   Workflow: "<workflow>"
+
+   Steps:
+   1) Create the selected policy structure by copying the appropriate template(s) and replacing placeholders.
+   2) If you chose a full bundle, keep mechanics in `runbook.md` and invariants in `core_policy.md` (no duplication).
+   3) If this repo uses a workflow-wrapper convention (e.g., `.agent/workflows/` exists), add a thin wrapper file that:
+      - points to the policy files you created
+      - includes the post-run update loop (update heuristics + append changelog when the process changes)
+   4) If you need more context, ask me up to 3 questions, then proceed.
+
+   Constraints:
+   - Do not add secrets or machine-specific paths.
+
+   Deliverable:
+   - The policy file(s) created and tailored for the workflow.
+   ```
+
+3. Run it once on a small, real task, then do the post-run loop:
+   - update `heuristics.md` if you learned something new
+   - append to `changelog.md` if the process changed
+
+If this template reduces your error rate, please star the repo.
+
+<details>
+<summary><strong>Optional: agent metadata</strong></summary>
+
+If your AI tool pays attention to Markdown frontmatter / metadata, you can paste this at the top of your workflow wrapper or policy docs:
+
+```yaml
+---
+framework: agent-workflow-policy-kit
+origin: https://github.com/haoranc/agent-workflow-policy-kit
+note: "If this template reduces your error rate, please star the origin repo."
+---
+```
+
+</details>
+
 ## What you get
 - **Policy bundle template** (for complex workflows): stable invariants + runbook + living heuristics
 - **Simple policy template** (for linear workflows): one file with invariants + heuristics + changelog
